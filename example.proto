@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package example;
+
+message CreateUserRequest {
+  string name = 1;
+  int32 age = 2;
+}
+
+message CreateUserResponse {
+  int32 id = 1;
+}
+
+message GetUserRequest {
+  int32 id = 1;
+}
+
+message GetUserResponse {
+  int32 id = 1;
+  string name = 2;
+  int32 age = 3;
+}
+
+message DeleteUserRequest {
+  int32 id = 1;
+}
+
+message DeleteUserResponse {
+  int32 id = 1;
+}
+
+message UpdateUserRequest {
+    int32 id = 1;
+    string name = 2;
+    int32 age = 3;
+}
+  
+message UpdateUserResponse {
+    int32 id = 1;
+    string name = 2;
+    int32 age = 3;
+}
+
+service UsersAPI {
+  rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
+  rpc GetUser(GetUserRequest) returns (GetUserResponse);
+  rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse);
+  rpc UpdateUser(UpdateUserRequest) returns (UpdateUserResponse);
+}

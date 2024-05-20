@@ -9,19 +9,19 @@ stub = UsersAPIStub(channel)
 
 def create_user(name, age):
     request = example_pb2.CreateUserRequest(name=name, age=age)
-    return stub.Createuser(request)
+    return stub.CreateUser(request)
 
 
 def get_user(id_):
     request = example_pb2.GetUserRequest(id=id_)
-    return stub.Getuser(request)
+    return stub.GetUser(request)
 
 
 def delete_user(id_):
     request = example_pb2.DeleteUserRequest(id=id_)
-    return stub.Deleteuser(request)
+    return stub.DeleteUser(request)
 
 
 def update_user(id_, name, age):
     request = example_pb2.UpdateUserRequest(id=id_, name=name, age=age)
-    return stub.Updateuser(request)
+    return stub.UpdateUser(request)

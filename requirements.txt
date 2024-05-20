@@ -4,5 +4,6 @@ grpcio-tools==1.57.0      # offers tools for working with gRPC, including code g
 protobuf==4.24.0          # provides the implementation of Protocol Buffers (data serialization format)
 pytest==8.1.1
 ruff==0.3.7
+autopep8==2.1.0
 #piccolo==1.5.0
 #fastapi==0.111.0
